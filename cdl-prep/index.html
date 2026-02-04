@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDL Prep 2026 - Pass Your CDL Exam | Tecton Labs</title>
+    <meta name="description" content="The ultimate CDL exam preparation app. Practice questions, exam simulations, and track your progress. Pass your Commercial Driver's License exam with confidence.">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #000000 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #2979FF;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #2979FF 0%, #1565C0 100%);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 20px 60px rgba(41, 121, 255, 0.3);
+        }
+
+        .app-icon svg {
+            width: 60px;
+            height: 60px;
+            fill: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #94A3B8;
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+
+        /* App Store Button */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #FFFFFF;
+            color: #000000;
+            padding: 16px 32px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .download-btn svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        /* Features Section */
+        .features {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FFFFFF;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(41, 121, 255, 0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: #2979FF;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #FFFFFF;
+        }
+
+        .feature-card p {
+            color: #94A3B8;
+            font-size: 15px;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #2979FF;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #94A3B8;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Categories */
+        .categories {
+            margin-bottom: 60px;
+        }
+
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .category-tag {
+            background: rgba(41, 121, 255, 0.15);
+            border: 1px solid rgba(41, 121, 255, 0.3);
+            color: #2979FF;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Legal Links */
+        .legal-section {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .legal-links a {
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .legal-links a:hover {
+            color: #2979FF;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748B;
+            font-size: 12px;
+        }
+
+        footer p {
+            margin-bottom: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .legal-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <a href="../" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Tecton Labs
+            </a>
+
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M18 18.5c.83 0 1.5-.67 1.5-1.5V6c0-.83-.67-1.5-1.5-1.5H6c-.83 0-1.5.67-1.5 1.5v11c0 .83.67 1.5 1.5 1.5h12zm-6-11.5l5 3.5-5 3.5V7z"/>
+                </svg>
+            </div>
+
+            <h1>CDL Prep 2026</h1>
+            <p class="tagline">The smartest way to prepare for your Commercial Driver's License exam. Practice, learn, and pass with confidence.</p>
+
+            <a href="#" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Download on App Store
+            </a>
+        </header>
+
+        <!-- Features -->
+        <section class="features">
+            <h2 class="section-title">Everything You Need to Pass</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                    </div>
+                    <h3>500+ Practice Questions</h3>
+                    <p>Comprehensive question bank covering all CDL endorsements with detailed explanations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Exam Simulations</h3>
+                    <p>Realistic timed exams that mirror the actual CDL test experience.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                        </svg>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Track your readiness score and see exactly where you need to improve.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+                        </svg>
+                    </div>
+                    <h3>Learn As You Go</h3>
+                    <p>Detailed explanations for every answer help you understand the material.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Practice Questions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label">CDL Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Pass Rate</div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories">
+            <h2 class="section-title">All CDL Endorsements Covered</h2>
+            <div class="category-list">
+                <span class="category-tag">General Knowledge</span>
+                <span class="category-tag">Air Brakes</span>
+                <span class="category-tag">Combination Vehicles</span>
+                <span class="category-tag">Hazmat</span>
+                <span class="category-tag">Tanker</span>
+                <span class="category-tag">Doubles/Triples</span>
+                <span class="category-tag">Passenger</span>
+                <span class="category-tag">School Bus</span>
+            </div>
+        </section>
+
+        <!-- Legal Section -->
+        <section class="legal-section">
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="support.html">Support</a>
+            </div>
+            <footer>
+                <p>&copy; 2026 Tecton Labs. All rights reserved.</p>
+                <p>Tecton Labs is a division of 1873238 Alberta Ltd.</p>
+                <p>Calgary, Alberta</p>
+            </footer>
+        </section>
+    </div>
+</body>
+</html>

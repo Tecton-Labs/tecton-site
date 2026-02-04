@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - CDL Prep 2026 | Tecton Labs</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #000000 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #2979FF;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            color: #FFFFFF;
+        }
+
+        .subtitle {
+            color: #94A3B8;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            background: rgba(30, 30, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(41, 121, 255, 0.15);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .contact-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: #2979FF;
+        }
+
+        .contact-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: #94A3B8;
+            margin-bottom: 24px;
+        }
+
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #2979FF;
+            color: #FFFFFF;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .email-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(41, 121, 255, 0.3);
+        }
+
+        .email-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: rgba(30, 30, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 32px;
+        }
+
+        .faq-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px 0;
+        }
+
+        .faq-item:first-of-type {
+            padding-top: 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .faq-answer {
+            color: #94A3B8;
+            font-size: 15px;
+        }
+
+        /* Response Time */
+        .response-info {
+            background: rgba(0, 230, 118, 0.1);
+            border: 1px solid rgba(0, 230, 118, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .response-info svg {
+            width: 24px;
+            height: 24px;
+            fill: #00E676;
+            flex-shrink: 0;
+        }
+
+        .response-info p {
+            color: #E2E8F0;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748B;
+            font-size: 12px;
+        }
+
+        footer p {
+            color: #64748B;
+            margin-bottom: 4px;
+        }
+
+        a {
+            color: #2979FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to CDL Prep
+        </a>
+
+        <h1>Support</h1>
+        <p class="subtitle">We're here to help you succeed on your CDL exam</p>
+
+        <div class="response-info">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <p><strong>Quick Response:</strong> We typically respond to all support requests within 24-48 hours.</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </div>
+            <h2>Email Support</h2>
+            <p>Have a question, found a bug, or need help with the app? Send us an email and we'll get back to you as soon as possible.</p>
+            <a href="mailto:tectonlabs.ca@gmail.com?subject=CDL%20Prep%202026%20Support" class="email-btn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                tectonlabs.ca@gmail.com
+            </a>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I restore my purchase on a new device?</div>
+                <div class="faq-answer">Open CDL Prep 2026, go to Settings, and tap "Restore Purchases." Make sure you're signed in with the same Apple ID you used to make the original purchase.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I reset my progress?</div>
+                <div class="faq-answer">Go to Settings in the app and scroll down to find "Reset Progress." Please note this action cannot be undone.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are the questions based on real CDL exams?</div>
+                <div class="faq-answer">Our questions are designed to closely mirror the format and content of official CDL exams. However, we recommend also studying your state's official CDL manual for the most up-to-date information.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does the app work offline?</div>
+                <div class="faq-answer">Yes! All questions and study materials are stored locally on your device. You can study anywhere, even without an internet connection.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I request a refund?</div>
+                <div class="faq-answer">Refunds are processed through the Apple App Store. Visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> to request a refund for your purchase.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">I found an error in a question. How can I report it?</div>
+                <div class="faq-answer">Please email us at tectonlabs.ca@gmail.com with the question details and we'll review and correct it as soon as possible. We appreciate your help in improving the app!</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Tecton Labs. All rights reserved.</p>
+            <p>Tecton Labs is a division of 1873238 Alberta Ltd.</p>
+            <p>Calgary, Alberta</p>
+        </footer>
+    </div>
+</body>
+</html>
