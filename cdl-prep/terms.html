@@ -82,23 +82,42 @@
             color: #CBD5E1;
             margin-bottom: 16px;
             padding-left: 24px;
+            list-style: none;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 8px;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: -16px;
+            color: #2979FF;
         }
 
         .highlight {
-            background: rgba(255, 193, 7, 0.1);
-            border-left: 4px solid #FFC107;
-            padding: 16px 20px;
+            background: rgba(0, 230, 118, 0.1);
+            border-left: 4px solid #00E676;
+            padding: 20px 24px;
             border-radius: 0 12px 12px 0;
             margin: 24px 0;
         }
 
+        .highlight h3 {
+            color: #00E676;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
         .highlight p {
+            margin-bottom: 8px;
+        }
+
+        .highlight p:last-child {
             margin-bottom: 0;
-            color: #E2E8F0;
         }
 
         footer {
@@ -129,75 +148,31 @@
             Back to CDL Prep
         </a>
 
-        <h1>Terms of Use</h1>
-        <p class="last-updated">Last updated: February 4, 2026</p>
+        <h1>Terms of Use (EULA)</h1>
+        <p class="last-updated">Last Updated: January 2026</p>
 
         <div class="content">
-            <h2>Agreement to Terms</h2>
-            <p>By downloading, installing, or using CDL Prep 2026 ("the App"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the App.</p>
+            <h2>1. Agreement</h2>
+            <p>By using Tecton Labs CDL Prep 2026, you agree to these terms.</p>
 
-            <h2>Description of Service</h2>
-            <p>CDL Prep 2026 is an educational mobile application designed to help users prepare for the Commercial Driver's License (CDL) examination. The App provides:</p>
-            <ul>
-                <li>Practice questions and quizzes</li>
-                <li>Exam simulations</li>
-                <li>Progress tracking features</li>
-                <li>Study materials for various CDL endorsements</li>
-            </ul>
+            <h2>2. Lifetime Pro Access</h2>
+            <p>The "Pro" upgrade is a one-time, lifetime purchase. There are no recurring subscription fees.</p>
+
+            <h2>3. Educational Tool Disclaimer</h2>
+            <p>This app is a study aid. While content is based on CDL standards, the app is not an official licensing body and does not guarantee a passing grade on official DMV exams.</p>
 
             <div class="highlight">
-                <p><strong>Important Disclaimer:</strong> CDL Prep 2026 is a study aid only. Completing the app or achieving high scores does not guarantee you will pass the official CDL examination. Always refer to your state's official CDL manual and testing requirements.</p>
+                <h3>4. The Tecton 95% Pass Guarantee</h3>
+                <p><strong>The Offer:</strong> We offer a full refund of your "Pro" purchase if you fail your official DMV CDL written exam.</p>
+                <p><strong>Eligibility:</strong> You must have achieved an Overall Readiness Score of 95% or higher in the app prior to your official exam date.</p>
+                <p><strong>Redemption:</strong> Email a copy of your official failure notice to <a href="mailto:tectonlabs.ca@gmail.com">tectonlabs.ca@gmail.com</a> within 30 days of your exam.</p>
             </div>
 
-            <h2>User Accounts and Purchases</h2>
-            <p>The App offers both free and premium features:</p>
-            <ul>
-                <li><strong>Free Features:</strong> Access to General Knowledge questions and basic study features</li>
-                <li><strong>Premium Features:</strong> Access to all endorsement categories, exam simulations, and advanced features (requires in-app purchase)</li>
-            </ul>
-            <p>All purchases are processed through the Apple App Store and are subject to Apple's terms and conditions. Refunds are handled according to Apple's refund policy.</p>
+            <h2>5. License</h2>
+            <p>We grant you a personal, non-exclusive license for individual study.</p>
 
-            <h2>Acceptable Use</h2>
-            <p>You agree to use the App only for its intended educational purpose. You agree NOT to:</p>
-            <ul>
-                <li>Copy, redistribute, or republish the App's content</li>
-                <li>Attempt to reverse engineer or decompile the App</li>
-                <li>Use the App for any commercial purpose without authorization</li>
-                <li>Share your premium access with others</li>
-                <li>Use the App in any way that violates applicable laws</li>
-            </ul>
-
-            <h2>Intellectual Property</h2>
-            <p>All content in CDL Prep 2026, including but not limited to questions, explanations, graphics, and user interface design, is the property of Tecton Labs and is protected by copyright and other intellectual property laws.</p>
-
-            <h2>Disclaimer of Warranties</h2>
-            <p>THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT:</p>
-            <ul>
-                <li>The App will be error-free or uninterrupted</li>
-                <li>The content is completely accurate or up-to-date with the latest CDL regulations</li>
-                <li>Using the App will guarantee passing the CDL exam</li>
-            </ul>
-
-            <h2>Limitation of Liability</h2>
-            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, TECTON LABS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES RESULTING FROM YOUR USE OF THE APP, INCLUDING BUT NOT LIMITED TO:</p>
-            <ul>
-                <li>Failure to pass the CDL examination</li>
-                <li>Loss of data or study progress</li>
-                <li>Any errors or inaccuracies in the content</li>
-            </ul>
-
-            <h2>Changes to Terms</h2>
-            <p>We reserve the right to modify these Terms of Use at any time. Continued use of the App after changes constitutes acceptance of the modified terms.</p>
-
-            <h2>Governing Law</h2>
-            <p>These Terms shall be governed by and construed in accordance with the laws of the Province of Alberta, Canada, without regard to its conflict of law provisions.</p>
-
-            <h2>Contact Information</h2>
-            <p>For questions about these Terms of Use, please contact us at:</p>
-            <p>
-                <strong>Email:</strong> <a href="mailto:tectonlabs.ca@gmail.com">tectonlabs.ca@gmail.com</a><br>
-                <strong>Website:</strong> <a href="https://tectonlabs.ca">tectonlabs.ca</a>
-            </p>
+            <h2>6. Contact</h2>
+            <p>For questions about these terms, email: <a href="mailto:tectonlabs.ca@gmail.com">tectonlabs.ca@gmail.com</a></p>
         </div>
 
         <footer>

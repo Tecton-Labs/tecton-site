@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CDL Prep 2026 - Pass Your CDL Exam | Tecton Labs</title>
-    <meta name="description" content="The ultimate CDL exam preparation app. Practice questions, exam simulations, and track your progress. Pass your Commercial Driver's License exam with confidence.">
+    <meta name="description" content="The ultimate CDL exam preparation app. 750+ practice questions, 100% pass guarantee, lifetime access. Pass your Commercial Driver's License exam with confidence.">
     <link rel="icon" type="image/png" href="../favicon.png">
     <style>
         * {
@@ -49,21 +49,11 @@
         }
 
         .app-icon {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #2979FF 0%, #1565C0 100%);
-            border-radius: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 140px;
+            height: 140px;
+            border-radius: 32px;
             margin: 0 auto 24px;
             box-shadow: 0 20px 60px rgba(41, 121, 255, 0.3);
-        }
-
-        .app-icon svg {
-            width: 60px;
-            height: 60px;
-            fill: white;
         }
 
         h1 {
@@ -79,7 +69,7 @@
         .tagline {
             font-size: 1.25rem;
             color: #94A3B8;
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto 32px;
         }
 
@@ -108,8 +98,36 @@
             height: 28px;
         }
 
-        /* Features Section */
-        .features {
+        /* Guarantee Banner */
+        .guarantee-banner {
+            background: linear-gradient(135deg, rgba(0, 230, 118, 0.15) 0%, rgba(0, 200, 83, 0.1) 100%);
+            border: 2px solid rgba(0, 230, 118, 0.4);
+            border-radius: 20px;
+            padding: 24px 32px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .guarantee-banner h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #00E676;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .guarantee-banner p {
+            color: #CBD5E1;
+            font-size: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* USP Section */
+        .usp-section {
             margin-bottom: 60px;
         }
 
@@ -121,20 +139,25 @@
             color: #FFFFFF;
         }
 
-        .features-grid {
+        .usp-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
 
-        .feature-card {
+        .usp-card {
             background: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 32px;
         }
 
-        .feature-icon {
+        .usp-card.highlight {
+            border-color: rgba(41, 121, 255, 0.4);
+            background: linear-gradient(135deg, rgba(41, 121, 255, 0.1) 0%, rgba(30, 30, 30, 0.8) 100%);
+        }
+
+        .usp-icon {
             width: 56px;
             height: 56px;
             background: rgba(41, 121, 255, 0.15);
@@ -143,24 +166,20 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
+            font-size: 28px;
         }
 
-        .feature-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: #2979FF;
-        }
-
-        .feature-card h3 {
+        .usp-card h3 {
             font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 12px;
             color: #FFFFFF;
         }
 
-        .feature-card p {
+        .usp-card p {
             color: #94A3B8;
             font-size: 15px;
+            line-height: 1.6;
         }
 
         /* Stats Section */
@@ -214,6 +233,57 @@
             font-size: 14px;
         }
 
+        /* Pricing Comparison */
+        .pricing-section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .pricing-comparison {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .pricing-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+            min-width: 200px;
+        }
+
+        .pricing-card.ours {
+            border-color: #00E676;
+            background: linear-gradient(135deg, rgba(0, 230, 118, 0.1) 0%, rgba(30, 30, 30, 0.8) 100%);
+        }
+
+        .pricing-card .label {
+            color: #94A3B8;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #FFFFFF;
+        }
+
+        .pricing-card.ours .price {
+            color: #00E676;
+        }
+
+        .pricing-card .period {
+            color: #64748B;
+            font-size: 14px;
+        }
+
+        .pricing-card.ours .period {
+            color: #00E676;
+        }
+
         /* Legal Links */
         .legal-section {
             text-align: center;
@@ -264,6 +334,11 @@
                 flex-direction: column;
                 gap: 16px;
             }
+
+            .pricing-comparison {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -278,14 +353,10 @@
                 Tecton Labs
             </a>
 
-            <div class="app-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M18 18.5c.83 0 1.5-.67 1.5-1.5V6c0-.83-.67-1.5-1.5-1.5H6c-.83 0-1.5.67-1.5 1.5v11c0 .83.67 1.5 1.5 1.5h12zm-6-11.5l5 3.5-5 3.5V7z"/>
-                </svg>
-            </div>
+            <img src="app-icon.png" alt="CDL Prep 2026" class="app-icon">
 
             <h1>CDL Prep 2026</h1>
-            <p class="tagline">The smartest way to prepare for your Commercial Driver's License exam. Practice, learn, and pass with confidence.</p>
+            <p class="tagline">Stop overpaying for CDL prep. Get lifetime access to 750+ exam questions for less than the cost of one month with our competitors.</p>
 
             <a href="#" class="download-btn">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -295,48 +366,60 @@
             </a>
         </header>
 
-        <!-- Features -->
-        <section class="features">
-            <h2 class="section-title">Everything You Need to Pass</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                        </svg>
-                    </div>
-                    <h3>500+ Practice Questions</h3>
-                    <p>Comprehensive question bank covering all CDL endorsements with detailed explanations.</p>
+        <!-- Pass Guarantee Banner -->
+        <div class="guarantee-banner">
+            <h2>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#00E676">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                </svg>
+                The Tecton 95% Pass Guarantee
+            </h2>
+            <p>We're so confident in our methods that if you achieve a 95% Readiness Score and don't pass your official CDL exam, we'll provide a full refund. No questions asked.</p>
+        </div>
+
+        <!-- USP Section -->
+        <section class="usp-section">
+            <h2 class="section-title">Why CDL Prep 2026?</h2>
+            <div class="usp-grid">
+                <div class="usp-card highlight">
+                    <div class="usp-icon">💰</div>
+                    <h3>Stop Overpaying</h3>
+                    <p>No monthly subscriptions. Get Lifetime Pro access for less than the cost of one month with our competitors. Pay once, study forever.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3>Exam Simulations</h3>
-                    <p>Realistic timed exams that mirror the actual CDL test experience.</p>
+                <div class="usp-card">
+                    <div class="usp-icon">📚</div>
+                    <h3>2026 Federal Standards</h3>
+                    <p>Don't study outdated material. Our curriculum is built directly from the official 2026 CDL manual to ensure you learn exactly what's on the test.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-                        </svg>
-                    </div>
-                    <h3>Progress Tracking</h3>
-                    <p>Track your readiness score and see exactly where you need to improve.</p>
+                <div class="usp-card">
+                    <div class="usp-icon">✅</div>
+                    <h3>750+ Exam Questions</h3>
+                    <p>Practice with a massive bank of questions that mirror the real test, ensuring you walk into the exam center with total confidence.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-                        </svg>
-                    </div>
-                    <h3>Learn As You Go</h3>
-                    <p>Detailed explanations for every answer help you understand the material.</p>
+                <div class="usp-card">
+                    <div class="usp-icon">📊</div>
+                    <h3>Track Your Readiness</h3>
+                    <p>Our smart Readiness Score tells you exactly when you're prepared to pass. No guessing, just confidence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Comparison -->
+        <section class="pricing-section">
+            <h2 class="section-title">Lifetime Access, Not Subscriptions</h2>
+            <div class="pricing-comparison">
+                <div class="pricing-card">
+                    <div class="label">Other CDL Apps</div>
+                    <div class="price">$9.99</div>
+                    <div class="period">/month forever</div>
+                </div>
+                <div class="pricing-card ours">
+                    <div class="label">CDL Prep 2026</div>
+                    <div class="price">One-Time</div>
+                    <div class="period">Lifetime Access</div>
                 </div>
             </div>
         </section>
@@ -344,16 +427,16 @@
         <!-- Stats -->
         <section class="stats">
             <div class="stat-card">
-                <div class="stat-number">500+</div>
+                <div class="stat-number">750+</div>
                 <div class="stat-label">Practice Questions</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">8</div>
-                <div class="stat-label">CDL Categories</div>
+                <div class="stat-label">CDL Endorsements</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">95%</div>
-                <div class="stat-label">Pass Rate</div>
+                <div class="stat-label">Pass Guarantee</div>
             </div>
         </section>
 
