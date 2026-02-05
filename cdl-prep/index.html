@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDL Prep 2026 - Pass Your CDL Exam | Tecton Labs</title>
-    <meta name="description" content="The ultimate CDL exam preparation app. 750+ practice questions, 100% pass guarantee, lifetime access. Pass your Commercial Driver's License exam with confidence.">
+    <title>CDL Practice Prep 2026 - Pass Your CDL Exam | Tecton Labs</title>
+    <meta name="description" content="The ultimate CDL exam preparation app. 750+ practice questions, 95% pass guarantee, lifetime access for just $24.99. Pass your Commercial Driver's License exam with confidence.">
     <link rel="icon" type="image/png" href="../favicon.png">
     <style>
         * {
@@ -24,43 +24,73 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 24px;
+            padding: 0 24px;
         }
 
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
+        /* Navigation Bar */
+        .navbar {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .back-link {
-            display: inline-flex;
+        .navbar .container {
+            display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+        }
+
+        .nav-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
             color: #94A3B8;
             text-decoration: none;
             font-size: 14px;
-            margin-bottom: 40px;
+            font-weight: 500;
             transition: color 0.2s;
         }
 
-        .back-link:hover {
-            color: #2979FF;
+        .nav-links a:hover {
+            color: #FFFFFF;
         }
 
-        .app-icon {
-            width: 140px;
-            height: 140px;
-            border-radius: 32px;
-            margin: 0 auto 24px;
-            box-shadow: 0 20px 60px rgba(41, 121, 255, 0.3);
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 900;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #2979FF 0%, #00E676 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -70,7 +100,7 @@
             font-size: 1.25rem;
             color: #94A3B8;
             max-width: 600px;
-            margin: 0 auto 32px;
+            margin: 0 auto 40px;
         }
 
         /* App Store Button */
@@ -80,7 +110,7 @@
             gap: 12px;
             background: #FFFFFF;
             color: #000000;
-            padding: 16px 32px;
+            padding: 18px 36px;
             border-radius: 16px;
             text-decoration: none;
             font-weight: 700;
@@ -104,8 +134,9 @@
             border: 2px solid rgba(0, 230, 118, 0.4);
             border-radius: 20px;
             padding: 24px 32px;
-            margin-bottom: 60px;
+            margin: 60px auto;
             text-align: center;
+            max-width: 700px;
         }
 
         .guarantee-banner h2 {
@@ -122,98 +153,188 @@
         .guarantee-banner p {
             color: #CBD5E1;
             font-size: 15px;
-            max-width: 600px;
-            margin: 0 auto;
         }
 
-        /* USP Section */
-        .usp-section {
-            margin-bottom: 60px;
+        /* Why Choose Us - 2x2 Grid */
+        .why-section {
+            padding: 60px 0;
         }
 
         .section-title {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 800;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
             color: #FFFFFF;
         }
 
-        .usp-grid {
+        .why-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
         }
 
-        .usp-card {
+        .why-card {
             background: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            border-radius: 24px;
             padding: 32px;
-        }
-
-        .usp-card.highlight {
-            border-color: rgba(41, 121, 255, 0.4);
-            background: linear-gradient(135deg, rgba(41, 121, 255, 0.1) 0%, rgba(30, 30, 30, 0.8) 100%);
-        }
-
-        .usp-icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(41, 121, 255, 0.15);
-            border-radius: 16px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 28px;
+            text-align: center;
         }
 
-        .usp-card h3 {
+        .why-card-image {
+            width: 100%;
+            max-width: 200px;
+            height: 160px;
+            object-fit: contain;
+            margin-bottom: 24px;
+        }
+
+        .why-card h3 {
             font-size: 1.25rem;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 12px;
             color: #FFFFFF;
         }
 
-        .usp-card p {
+        .why-card p {
             color: #94A3B8;
             font-size: 15px;
             line-height: 1.6;
         }
 
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 60px;
+        /* Badge styling for cards */
+        .why-badge {
+            display: inline-block;
+            background: rgba(41, 121, 255, 0.2);
+            color: #2979FF;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
         }
 
-        .stat-card {
-            background: rgba(30, 30, 30, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 32px;
+        .why-badge.green {
+            background: rgba(0, 230, 118, 0.2);
+            color: #00E676;
+        }
+
+        .why-badge.gold {
+            background: rgba(255, 193, 7, 0.2);
+            color: #FFC107;
+        }
+
+        .why-badge.purple {
+            background: rgba(156, 39, 176, 0.2);
+            color: #CE93D8;
+        }
+
+        /* Pricing Comparison */
+        .pricing-section {
+            padding: 60px 0;
             text-align: center;
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #2979FF;
-            margin-bottom: 8px;
+        .pricing-comparison {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
         }
 
-        .stat-label {
+        .pricing-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            min-width: 240px;
+            position: relative;
+        }
+
+        .pricing-card.competitors {
+            opacity: 0.7;
+        }
+
+        .pricing-card.competitors::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-5deg);
+            width: 80%;
+            height: 2px;
+            background: #FF5252;
+        }
+
+        .pricing-card.ours {
+            border: 2px solid #00E676;
+            background: linear-gradient(135deg, rgba(0, 230, 118, 0.1) 0%, rgba(30, 30, 30, 0.9) 100%);
+            transform: scale(1.05);
+        }
+
+        .pricing-label {
             color: #94A3B8;
             font-size: 14px;
             font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card.ours .pricing-label {
+            color: #00E676;
+        }
+
+        .pricing-amount {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            line-height: 1;
+        }
+
+        .pricing-card.competitors .pricing-amount {
+            color: #64748B;
+        }
+
+        .pricing-card.ours .pricing-amount {
+            color: #00E676;
+        }
+
+        .pricing-period {
+            color: #64748B;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .pricing-card.ours .pricing-period {
+            color: #00E676;
+        }
+
+        .savings-callout {
+            background: rgba(0, 230, 118, 0.1);
+            border: 1px solid rgba(0, 230, 118, 0.3);
+            border-radius: 12px;
+            padding: 16px 24px;
+            display: inline-block;
+        }
+
+        .savings-callout p {
+            color: #00E676;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 0;
         }
 
         /* Categories */
         .categories {
-            margin-bottom: 60px;
+            padding: 60px 0;
         }
 
         .category-list {
@@ -233,130 +354,124 @@
             font-size: 14px;
         }
 
-        /* Pricing Comparison */
-        .pricing-section {
-            margin-bottom: 60px;
-            text-align: center;
+        /* Footer */
+        .footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 0;
+            margin-top: 40px;
         }
 
-        .pricing-comparison {
+        .footer-content {
             display: flex;
-            justify-content: center;
-            gap: 24px;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
+            gap: 24px;
         }
 
-        .pricing-card {
-            background: rgba(30, 30, 30, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 32px;
-            min-width: 200px;
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .pricing-card.ours {
-            border-color: #00E676;
-            background: linear-gradient(135deg, rgba(0, 230, 118, 0.1) 0%, rgba(30, 30, 30, 0.8) 100%);
+        .footer-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
         }
 
-        .pricing-card .label {
-            color: #94A3B8;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .pricing-card .price {
-            font-size: 2rem;
-            font-weight: 900;
+        .footer-name {
+            font-weight: 700;
             color: #FFFFFF;
         }
 
-        .pricing-card.ours .price {
-            color: #00E676;
-        }
-
-        .pricing-card .period {
-            color: #64748B;
-            font-size: 14px;
-        }
-
-        .pricing-card.ours .period {
-            color: #00E676;
-        }
-
-        /* Legal Links */
-        .legal-section {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .legal-links {
+        .footer-links {
             display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
+            gap: 24px;
         }
 
-        .legal-links a {
+        .footer-links a {
             color: #94A3B8;
             text-decoration: none;
             font-size: 14px;
             transition: color 0.2s;
         }
 
-        .legal-links a:hover {
+        .footer-links a:hover {
             color: #2979FF;
         }
 
-        footer {
+        .footer-legal {
+            width: 100%;
             text-align: center;
-            color: #64748B;
-            font-size: 12px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 24px;
         }
 
-        footer p {
+        .footer-legal p {
+            color: #64748B;
+            font-size: 12px;
             margin-bottom: 4px;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.25rem;
             }
 
-            .stats {
+            .why-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .legal-links {
-                flex-direction: column;
-                gap: 16px;
             }
 
             .pricing-comparison {
                 flex-direction: column;
                 align-items: center;
             }
+
+            .pricing-card.ours {
+                transform: scale(1);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="app-icon.png" alt="CDL Practice Prep 2026" class="nav-logo">
+                <span class="nav-title">CDL Practice Prep 2026</span>
+            </div>
+            <div class="nav-links">
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <a href="../" class="back-link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-                Tecton Labs
-            </a>
-
-            <img src="app-icon.png" alt="CDL Prep 2026" class="app-icon">
-
-            <h1>CDL Prep 2026</h1>
-            <p class="tagline">Stop overpaying for CDL prep. Get lifetime access to 750+ exam questions for less than the cost of one month with our competitors.</p>
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1>Pass Your CDL Exam<br><span class="highlight">On The First Try</span></h1>
+            <p class="tagline">Stop overpaying for CDL prep. Get lifetime access to 750+ exam questions for a one-time payment of just $24.99.</p>
 
             <a href="#" class="download-btn">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -374,75 +489,66 @@
                 </svg>
                 The Tecton 95% Pass Guarantee
             </h2>
-            <p>We're so confident in our methods that if you achieve a 95% Readiness Score and don't pass your official CDL exam, we'll provide a full refund. No questions asked.</p>
+            <p>Achieve a 95% Readiness Score and don't pass? We'll refund your purchase. No questions asked.</p>
         </div>
 
-        <!-- USP Section -->
-        <section class="usp-section">
-            <h2 class="section-title">Why CDL Prep 2026?</h2>
-            <div class="usp-grid">
-                <div class="usp-card highlight">
-                    <div class="usp-icon">💰</div>
-                    <h3>Stop Overpaying</h3>
-                    <p>No monthly subscriptions. Get Lifetime Pro access for less than the cost of one month with our competitors. Pay once, study forever.</p>
+        <!-- Why Choose Us - 2x2 Grid -->
+        <section class="why-section">
+            <h2 class="section-title">Why Choose CDL Practice Prep 2026?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <img src="onboarding_1.png" alt="Stop Overpaying" class="why-card-image">
+                    <span class="why-badge green">Best Value</span>
+                    <h3>One-Time Payment, Lifetime Access</h3>
+                    <p>No monthly subscriptions. Pay $24.99 once and own it forever. That's less than the cost of one month with our competitors.</p>
                 </div>
 
-                <div class="usp-card">
-                    <div class="usp-icon">📚</div>
-                    <h3>2026 Federal Standards</h3>
-                    <p>Don't study outdated material. Our curriculum is built directly from the official 2026 CDL manual to ensure you learn exactly what's on the test.</p>
+                <div class="why-card">
+                    <img src="onboarding_2.png" alt="Pass Guarantee" class="why-card-image">
+                    <span class="why-badge gold">Money Back</span>
+                    <h3>95% Pass Guarantee</h3>
+                    <p>We're so confident in our methods that if you achieve 95% readiness and don't pass, we'll give you a full refund.</p>
                 </div>
 
-                <div class="usp-card">
-                    <div class="usp-icon">✅</div>
-                    <h3>750+ Exam Questions</h3>
-                    <p>Practice with a massive bank of questions that mirror the real test, ensuring you walk into the exam center with total confidence.</p>
+                <div class="why-card">
+                    <img src="onboarding_3.png" alt="2026 Standards" class="why-card-image">
+                    <span class="why-badge">Up To Date</span>
+                    <h3>Official 2026 Federal Standards</h3>
+                    <p>Don't study outdated material. Our curriculum is built directly from the official 2026 CDL manual.</p>
                 </div>
 
-                <div class="usp-card">
-                    <div class="usp-icon">📊</div>
-                    <h3>Track Your Readiness</h3>
-                    <p>Our smart Readiness Score tells you exactly when you're prepared to pass. No guessing, just confidence.</p>
+                <div class="why-card">
+                    <img src="onboarding_4.png" alt="750+ Questions" class="why-card-image">
+                    <span class="why-badge purple">Comprehensive</span>
+                    <h3>Master 750+ Unique Questions</h3>
+                    <p>Practice with a massive question bank that mirrors the real test. Walk into your exam with total confidence.</p>
                 </div>
             </div>
         </section>
 
         <!-- Pricing Comparison -->
         <section class="pricing-section">
-            <h2 class="section-title">Lifetime Access, Not Subscriptions</h2>
+            <h2 class="section-title">Stop Wasting Money on Subscriptions</h2>
             <div class="pricing-comparison">
-                <div class="pricing-card">
-                    <div class="label">Other CDL Apps</div>
-                    <div class="price">$9.99</div>
-                    <div class="period">/month forever</div>
+                <div class="pricing-card competitors">
+                    <div class="pricing-label">Other CDL Apps</div>
+                    <div class="pricing-amount">$25</div>
+                    <div class="pricing-period">/month forever</div>
                 </div>
                 <div class="pricing-card ours">
-                    <div class="label">CDL Prep 2026</div>
-                    <div class="price">One-Time</div>
-                    <div class="period">Lifetime Access</div>
+                    <div class="pricing-label">CDL Practice Prep 2026</div>
+                    <div class="pricing-amount">$24.99</div>
+                    <div class="pricing-period">One-Time, Lifetime Access</div>
                 </div>
             </div>
-        </section>
-
-        <!-- Stats -->
-        <section class="stats">
-            <div class="stat-card">
-                <div class="stat-number">750+</div>
-                <div class="stat-label">Practice Questions</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">8</div>
-                <div class="stat-label">CDL Endorsements</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">95%</div>
-                <div class="stat-label">Pass Guarantee</div>
+            <div class="savings-callout">
+                <p>Save $275+ in your first year alone</p>
             </div>
         </section>
 
         <!-- Categories -->
         <section class="categories">
-            <h2 class="section-title">All CDL Endorsements Covered</h2>
+            <h2 class="section-title">All 8 CDL Endorsements Covered</h2>
             <div class="category-list">
                 <span class="category-tag">General Knowledge</span>
                 <span class="category-tag">Air Brakes</span>
@@ -454,20 +560,27 @@
                 <span class="category-tag">School Bus</span>
             </div>
         </section>
-
-        <!-- Legal Section -->
-        <section class="legal-section">
-            <div class="legal-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="support.html">Support</a>
-            </div>
-            <footer>
-                <p>&copy; 2026 Tecton Labs. All rights reserved.</p>
-                <p>Tecton Labs is a division of 1873238 Alberta Ltd.</p>
-                <p>Calgary, Alberta</p>
-            </footer>
-        </section>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="app-icon.png" alt="CDL Practice Prep 2026" class="footer-logo">
+                    <span class="footer-name">CDL Practice Prep 2026</span>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Use</a>
+                    <a href="support.html">Support</a>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p>&copy; 2026 Tecton Labs. All rights reserved.</p>
+                <p>Tecton Labs is a division of 1873238 Alberta Ltd. | Calgary, Alberta</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
