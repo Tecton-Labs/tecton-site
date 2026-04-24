@@ -58,6 +58,39 @@
             font-weight: 400;
         }
 
+        /* Availability Status */
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(0, 212, 255, 0.08);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            font-size: 0.85rem;
+            color: #9ca3af;
+            letter-spacing: 0.01em;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00d4ff;
+            box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+        }
+
+        .status-note {
+            margin-top: 18px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #6b7280;
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Legal Footer - DO NOT REMOVE */
         footer {
             margin-top: 35px;
@@ -73,11 +106,16 @@
     <div class="container">
         <img src="logo.png" alt="Tecton Labs" class="logo">
         <h1>Tecton Labs</h1>
-        <p class="subtitle">AI implementation partners for<br>enterprise and business.</p>
+        <p class="subtitle">Enterprise AI, shipped.</p>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            <span>Client roster is full</span>
+        </div>
+        <p class="status-note">Next intake coming soon &mdash; a full site will follow shortly.</p>
 
         <footer>
             <p>&copy; 2026 Tecton Labs.</p>
-            <p>tectonlabs.ca@gmail.com</p>
         </footer>
     </div>
 </body>
