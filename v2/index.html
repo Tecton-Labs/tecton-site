@@ -1216,6 +1216,7 @@
         const panel = document.querySelector("[data-form-panel]");
         const submitButton = document.querySelector("[data-submit-button]");
         const formMessage = document.querySelector("[data-form-message]");
+        const FORM_ENDPOINT = "https://formsubmit.co/ajax/tectonlabs.ca@gmail.com";
 
         function setHeaderState() {
             header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -1318,13 +1319,15 @@
                 formMessage.classList.remove("error");
 
                 const formData = new FormData(form);
+                const submittedAt = new Date().toISOString();
                 const values = {
                     name: String(formData.get("name") || ""),
                     email: String(formData.get("email") || ""),
                     company: String(formData.get("company") || ""),
                     message: String(formData.get("message") || ""),
                     website: String(formData.get("website") || ""),
-                    pageUrl: window.location.href
+                    pageUrl: window.location.href,
+                    submittedAt
                 };
 
                 if (!validate(values)) return;
@@ -1333,10 +1336,23 @@
                 submitButton.textContent = "Sending...";
 
                 try {
-                    const response = await fetch("/api/contact", {
+                    const response = await fetch(FORM_ENDPOINT, {
                         method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(values)
+                        headers: {
+                            "Accept": "application/json",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            name: values.name,
+                            email: values.email,
+                            company: values.company || "Not provided",
+                            message: values.message,
+                            submittedAt: values.submittedAt,
+                            pageUrl: values.pageUrl,
+                            _subject: "New TectonLabs Consultation Request",
+                            _captcha: "false",
+                            _template: "table"
+                        })
                     });
 
                     if (!response.ok) throw new Error("Request failed");

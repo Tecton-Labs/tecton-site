@@ -49,23 +49,29 @@ Other static files:
 
 ## Contact Form
 
-The consultation form on both versions submits to `/api/contact`.
+The consultation form on both versions is currently wired to submit through `formsubmit.co` to `tectonlabs.ca@gmail.com`.
 
-Server handler:
+This is the current production-friendly path for a static GitHub Pages deploy because it does not require a running backend.
+
+Fields sent on submit:
+
+- `name`
+- `email`
+- `company`
+- `message`
+- `submittedAt`
+- `pageUrl`
+
+Current behavior:
+
+- The frontend still handles validation, loading state, and success/error messaging locally.
+- The email is delivered to Gmail until a domain-based mailbox is ready.
+
+Future backend option:
 
 - [api/contact.js](/Users/matpaul/tecton-site/api/contact.js)
 
-Environment variables expected by that handler:
-
-- `RESEND_API_KEY`
-- `CONTACT_TO_EMAIL` optional
-- `CONTACT_FROM_EMAIL` optional
-
-Important note:
-
-- GitHub Pages does not run Node handlers by itself.
-- If `/api/contact` works in production, it is because something outside plain GitHub Pages is handling that route, such as a proxy, worker, or another platform.
-- If the form does not work after publishing `/v2/`, the first place to inspect is how `/api/contact` is currently being hosted.
+That handler is kept in the repo as a future option for moving back to a first-party backend with Resend or another mail provider, but GitHub Pages does not run it by itself.
 
 ## Editing Guidance
 
