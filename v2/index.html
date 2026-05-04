@@ -395,10 +395,10 @@
             width: min(100%, 32rem);
             height: min(86%, 30rem);
             content: "";
-            background: radial-gradient(circle at 48% 50%, rgba(var(--accent-rgb), 0.28), transparent 44%);
-            filter: blur(18px);
-            opacity: 0.9;
-            transform: translate(-1rem, 1.05rem);
+            background: radial-gradient(circle at 45% 48%, rgba(var(--accent-rgb), 0.24), transparent 42%);
+            filter: blur(14px);
+            opacity: 0.78;
+            transform: translate(-1.1rem, 1.1rem);
         }
 
         .hero-image {
@@ -407,7 +407,9 @@
             width: min(100%, 34rem);
             height: auto;
             transform: translate(-0.7rem, 0.85rem);
-            filter: saturate(1.08) contrast(1.05) brightness(1.02) drop-shadow(0 0 32px var(--glow-medium));
+            filter: saturate(1.06) contrast(1.04) drop-shadow(0 0 26px var(--glow-soft));
+            -webkit-mask-image: radial-gradient(ellipse at 51% 49%, black 48%, rgba(0, 0, 0, 0.9) 62%, transparent 82%);
+            mask-image: radial-gradient(ellipse at 51% 49%, black 48%, rgba(0, 0, 0, 0.9) 62%, transparent 82%);
         }
 
         .value-strip {
