@@ -2,13 +2,13 @@
 
 ## Current State
 
-This is an existing static website repo for Tecton Labs.
+This is the static website repo for Tecton Labs.
 
 - Branch: `main`
 - Remote: `https://github.com/Tecton-Labs/tecton-site.git`
-- Local branch state at setup time: ahead of `origin/main` by 2 commits
-- Net file diff against `origin/main`: none from those two commits
-- Untracked local file at setup time: `.DS_Store`
+- Root homepage: `index.html`
+- Current local state: clean and synced with `origin/main` before this handoff update
+- Deployment assumption: GitHub Pages / `CNAME` for `tectonlabs.ca`
 
 Public entry points:
 
@@ -19,37 +19,48 @@ The root website is static HTML with inline CSS and JavaScript. There is no pack
 
 ## What Changed Last
 
-Project framework files were added so future sessions can enter the repo cold and understand the ownership, deployment shape, current state, and next actions.
+The rejected local V2 prototype was removed and the repo was reset back to the clean static baseline. It was never pushed and never affected the live site.
 
-Added:
+Important correction:
 
-- `PROJECT_BRIEF.md`
-- `HANDOFF.md`
-- `AGENTS.md`
-- `.env.example`
-- `.gitignore`
-- `docs/secrets-and-access.md`
-
-Updated:
-
-- `README.md`
+- Do **not** replace or overwrite `index.html` while designing V2.
+- The current root page stays intact until Mat explicitly approves a replacement.
+- Build the next V2 as a separate comparison surface.
 
 ## Next Action
 
-Decide the immediate site-building direction:
+Mat is going to continue the V2 design inside the Codex application because it can preview the design while editing.
 
-- continue iterating on the current static root,
-- replace it with a cleaner new implementation,
-- or clean up and deploy the current static structure first.
+For the next agent:
 
-After that decision, inspect the target page visually on desktop and mobile before editing.
+1. Inspect `index.html`, `assets/`, `README.md`, `PROJECT_BRIEF.md`, and `docs/website-architecture.md`.
+2. Keep `/` unchanged.
+3. Put new V2 work somewhere separate, preferably:
+   - `v2/index.html` for a static comparison page, or
+   - a separate branch / preview deployment if the new code uses a framework.
+4. Match the actual Tecton logo colors and current brand assets before exploring new visual systems.
+5. Use the code Mat provides as the starting point.
+6. Do not deploy or push a root replacement until Mat approves the V2 direction.
 
-## Blockers
+## Design Notes From Latest Feedback
 
-- Confirm whether `Personal - Tecton Labs Website` exists in 1Password or should be created.
-- Create project-scoped 1Password service account `tecton-site-agent` after CLI authorization works.
-- Confirm the intended production contact form path: static `formsubmit.co` or first-party Resend handler.
-- Confirm whether the local ahead-by-2 Git history should be pushed or reconciled.
+- The previous V2 attempt was not acceptable.
+- It did not feel sharp, clean, premium, or high-end enough.
+- It did not match the Tecton logo color system closely enough.
+- Start fresh rather than iterating the discarded prototype.
+- Treat the new version as a comparison page, not a production replacement.
+
+## Open TODOs
+
+- Build a new V2 comparison page from Mat's provided code.
+- Keep current `index.html` live and untouched while comparing.
+- Preserve `/cdl-prep/` legacy URLs.
+- Once a V2 direction is approved, decide whether to:
+  - replace root static HTML,
+  - migrate to a framework,
+  - or deploy a separate preview to Vercel first.
+- Confirm whether the project-specific 1Password vault `Personal - Tecton Labs Website` exists.
+- Create scoped 1Password service account `tecton-site-agent` after CLI authorization flow is stable.
 
 ## Verification
 
@@ -67,13 +78,11 @@ Static verification options:
 - `docs/website-architecture.md` documents the current static architecture and asset layout.
 - `docs/secrets-and-access.md` documents the intended project-specific 1Password vault and service account pattern.
 - Tecton Labs is Mat's owned AI agency brand, not a client project. Treat this as a Personal AI / owned-agency project unless the project taxonomy is expanded later.
-- Notion Project Dashboard card: `https://www.notion.so/35907c06f86e81e4a0dff1cb75acf73e`
-- `/Users/matpaul/cdl-prep` is now the standalone source copy for legacy CDL Prep content.
+- `/Users/matpaul/cdl-prep` is the standalone source copy for legacy CDL Prep content.
 - `tecton-site/cdl-prep/` remains the published GitHub Pages copy so `https://tectonlabs.ca/cdl-prep/` keeps working.
 - CDL Prep is legacy content from an earlier mobile app direction. Ignore it for the AI agency website roadmap unless explicitly in scope.
 - The contact form in `index.html` currently posts to `https://formsubmit.co/ajax/tectonlabs.ca@gmail.com`.
 - `api/contact.js` is not used by GitHub Pages. It is preserved as a future backend option for a platform that can run serverless functions.
-- Removed stale tracked assets: old full `logo.png`, lower-res `assets/hero-tecton-reference.png`, and duplicate `/v2/` review candidate.
 - Avoid committing secrets, `.env`, generated output, or OS/editor files.
 
 ## Files / Areas To Inspect First
@@ -83,5 +92,6 @@ Static verification options:
 - `docs/website-architecture.md`
 - `docs/secrets-and-access.md`
 - `index.html`
+- `assets/`
 - `api/contact.js`
 - `cdl-prep/index.html` only if the legacy CDL Prep pages are explicitly in scope
